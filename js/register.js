@@ -88,4 +88,9 @@ plus.onclick = function() {
    display.innerHTML = newArray;
  }
 
+ clear.onclick = function() {
+  newArray.length = 0;
+  display.innerHTML = newArray;
+}
+
 }

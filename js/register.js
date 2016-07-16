@@ -93,4 +93,29 @@ plus.onclick = function() {
   display.innerHTML = newArray;
 }
 
+equals.onclick = function() {
+
+   var operator = newArray[1];
+   switch(operator) {
+     case "+":
+       var sum = newArray[0] + newArray[2];
+       display.innerHTML = sum;
+       break;
+     case "-":
+       var difference = newArray[0] - newArray[2];
+       display.innerHTML = difference;
+       break;
+     case "x":
+       var product = newArray[0] * newArray[2];
+       display.innerHTML = product;
+       break;
+     case "/":
+       var quotient = newArray[0] / newArray[2];
+       display.innerHTML = quotient;
+       break;
+     default:
+       display.innerHTML = "Error";
+   }
+ }
+
 }

@@ -20,9 +20,7 @@ window.onLoad () {
 //Need an event listener to listen to all the buttons and fire when clicked
 document.getElementById('1').addEventListener('click', display());
 
-  var display = function(pressed) {
-      document.getElementById('display').innerHTML = pressed;
+  var display = function() {
+      document.getElementById('display').innerHTML = ();
     }
   }
-
-  

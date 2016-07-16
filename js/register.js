@@ -68,4 +68,24 @@ button0.onclick = function() {
   display.innerHTML = newArray;
 }
 
+plus.onclick = function() {
+   newArray.push("+");
+   display.innerHTML = newArray;
+ }
+
+ minus.onclick = function() {
+   newArray.push("-");
+   display.innerHTML = newArray;
+ }
+
+ multiply.onclick = function() {
+   newArray.push("x");
+   display.innerHTML = newArray;
+ }
+
+ divide.onclick = function() {
+   newArray.push("/");
+   display.innerHTML = newArray;
+ }
+
 }

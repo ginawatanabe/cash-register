@@ -95,26 +95,34 @@ plus.onclick = function() {
 
 equals.onclick = function() {
   console.log(newArray);
-    var plusindex = newArray.indexOf('+');
-    var subtractindex = newArray.indexOf('-');
-    var multiplyindex = newArray.indexOf('x')
-    var divideindex = newArray.indexOf('/');
 
     var operator = ['+', '-', 'x', '/'];
     newArray.forEach(function(element, index){
       if (operator.indexOf(element) > -1){
-        console.log(operator)
+        console.log(newArray[index]);
         var left = newArray.slice(0, index);
         var right = newArray.slice(index+1);
         console.log(left.join(''), right.join(''));
-        console.log(Number(left.join('')) + Number(right.join('')));
+
+        if (newArray[index] === "+") {
+          console.log(Number(left.join(''))+Number(right.join('')));
+          display.innerHTML = Number(left.join('')) + Number(right.join(''));
+        }
+
+        if (newArray[index] === "-") {
+          console.log(Number(left.join('')) - Number(right.join('')));
+          display.innerHTML = Number(left.join('') - Number(right.join('')));
+        }
+
+        if (newArray[index] === "x") {
+          console.log(Number(left.join('')) - Number(right.join('')));
+          display.innerHTML = Number(left.join('')*Number(right.join('')));
+        }
+
+        if (newArray[index] === "/") {
+          console.log(Number(left.join('')) / Number(right.join('')));
+          display.innerHTML = Number(left.join('')/Number(right.join('')));
+        }
       }
     })
-    for (i=0; i<newArray.length; i++) {
-     if (subtractindex) {
-       console.log('hi');
-       var sum = Number(left.join('') + right.join(''));
-       display.innerHTML = sum;
-   }
-
-}
+  }

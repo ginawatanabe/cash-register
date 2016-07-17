@@ -110,5 +110,11 @@ equals.onclick = function() {
         console.log(Number(left.join('')) + Number(right.join('')));
       }
     })
+    for (i=0; i<newArray.length; i++) {
+     if (subtractindex) {
+       console.log('hi');
+       var sum = Number(left.join('') + right.join(''));
+       display.innerHTML = sum;
+   }
 
 }

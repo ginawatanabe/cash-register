@@ -94,28 +94,21 @@ plus.onclick = function() {
 }
 
 equals.onclick = function() {
+  console.log(newArray);
+    var plusindex = newArray.indexOf('+');
+    var subtractindex = newArray.indexOf('-');
+    var multiplyindex = newArray.indexOf('x')
+    var divideindex = newArray.indexOf('/');
 
-   var operator = newArray[1];
-   switch(operator) {
-     case "+":
-       var sum = newArray[0] + newArray[2];
-       display.innerHTML = sum;
-       break;
-     case "-":
-       var difference = newArray[0] - newArray[2];
-       display.innerHTML = difference;
-       break;
-     case "x":
-       var product = newArray[0] * newArray[2];
-       display.innerHTML = product;
-       break;
-     case "/":
-       var quotient = newArray[0] / newArray[2];
-       display.innerHTML = quotient;
-       break;
-     default:
-       display.innerHTML = "Error";
-   }
- }
+    var operator = ['+', '-', 'x', '/'];
+    newArray.forEach(function(element, index){
+      if (operator.indexOf(element) > -1){
+        console.log(operator)
+        var left = newArray.slice(0, index);
+        var right = newArray.slice(index+1);
+        console.log(left.join(''), right.join(''));
+        console.log(Number(left.join('')) + Number(right.join('')));
+      }
+    })
 
 }

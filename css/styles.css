@@ -1,0 +1,10 @@
+#display {
+  font-size: 30px;
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+}

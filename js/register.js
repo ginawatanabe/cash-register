@@ -6,7 +6,7 @@ window.onload = function() {
   var newArray = [];
 
   for (i=0; i<button.length; i++) {
-    button[i].onclick = function() {
+      button[i].onclick = function() {
       newArray.push(this.id);
       display.innerHTML = newArray;
       console.log(newArray);
@@ -14,40 +14,34 @@ window.onload = function() {
   }
 
  clear.onclick = function() {
-  newArray.length = 0;
-  display.innerHTML = newArray;
+      newArray.length = 0;
+      display.innerHTML = newArray;
 }
 
-equals.onclick = function() {
-  console.log(newArray);
+ equals.onclick = function() {
+      console.log(newArray);
 
-    var operator = ['+', '-', 'x', '/'];
-    newArray.forEach(function(element, index){
-      if (operator.indexOf(element) > -1){
-        console.log(newArray[index]);
-        var left = newArray.slice(0, index);
-        var right = newArray.slice(index+1);
-        console.log(left.join(''), right.join(''));
+      var operator = ['+', '-', 'x', '/'];
+      newArray.forEach(function(element, index){
+        if (operator.indexOf(element) > -1){
+          console.log(newArray[index]);
+          var left = newArray.slice(0, index);
+          var right = newArray.slice(index+1);
+          var leftside = Number(left.join(''));
+          var rightside = Number(right.join(''));
+          console.log(leftside, rightside);
 
-        if (newArray[index] === "+") {
-          console.log(Number(left.join(''))+Number(right.join('')));
-          display.innerHTML = Number(left.join('')) + Number(right.join(''));
-        }
-
-        if (newArray[index] === "-") {
-          console.log(Number(left.join('')) - Number(right.join('')));
-          display.innerHTML = Number(left.join('') - Number(right.join('')));
-        }
-
-        if (newArray[index] === "x") {
-          console.log(Number(left.join('')) - Number(right.join('')));
-          display.innerHTML = Number(left.join('')*Number(right.join('')));
-        }
-
-        if (newArray[index] === "/") {
-          console.log(Number(left.join('')) / Number(right.join('')));
-          display.innerHTML = Number(left.join('')/Number(right.join('')));
-        }
+          switch(newArray[index]) {
+            case '+': display.innerHTML = leftside + rightside;
+            break;
+            case '-': display.innerHTMl = leftside - rightside;
+            break;
+            case 'x': display.innerHTML = leftside * rightside;
+            break;
+            case '/': display.innerHTML = leftside / rightside;
+            break;
+            default: display.innerHTML = "Error";
+            }
+          }
+        })}
       }
-    })
-  }

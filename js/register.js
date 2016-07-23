@@ -8,7 +8,7 @@ window.onload = function() {
   for (i=0; i<button.length; i++) {
       button[i].onclick = function() {
       newArray.push(this.id);
-      display.innerHTML = newArray;
+      display.innerHTML = newArray.join('');
       console.log(newArray);
     }
   }

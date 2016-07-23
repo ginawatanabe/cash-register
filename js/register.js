@@ -15,6 +15,7 @@ window.onload = function() {
 
  clear.onclick = function() {
       newArray.length = 0;
+      newArray.push(0)
       display.innerHTML = newArray;
 }
 

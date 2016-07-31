@@ -1,5 +1,10 @@
 window.onload = function() {
-  var display = document.getElementById('display');
+  var num1 = document.getElementById('display1');
+  var num2 = document.getElementById('display2');
+  var num3 = document.getElementById('display3');
+  var num4 = document.getElementById('display4');
+  var num5 = document.getElementById('display5');
+
   var button = document.querySelectorAll('button');
   var equals = document.getElementById('total');
   var clear = document.getElementById('clear');

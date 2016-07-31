@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.row1 {
+  display: inline;
+}
+
 button {
   background: hsla(44, 100%, 52%, 1);
   width: 50px;

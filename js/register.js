@@ -54,4 +54,53 @@ for (i=0; i<ops.length; i++) {
     startmemory2();
   }
  }
-}
+
+equals.onclick = function() {
+
+  switch (num3.innerHTML) {
+    case '+':
+      var sum = Number(memory1)+Number(memory2);
+      num3.innerHTML = '';
+      num4.innerHTML = '';
+      num1.innerHTML = String(sum);
+      memory1 = String(sum);
+      memory2 = '';
+      console.log(memory1);
+      console.log(memory2);
+      break;
+    case '-':
+      var diff = Number(memory1)-Number(memory2);
+      num3.innerHTML = '';
+      num4.innerHTML = '';
+      num1.innerHTML = String(diff);
+      memory1 = String(diff);
+      memory2 = '';
+      console.log(memory1);
+      console.log(memory2);
+      break;
+    case 'x':
+      var product = Number(memory1)*Number(memory2);
+      num3.innerHTML = '';
+      num4.innerHTML = '';
+      num1.innerHTML = String(product);
+      memory1 = String(product);
+      memory2 = '';
+      console.log(memory1);
+      console.log(memory2);
+      break;
+    case '/':
+      var quotient = Number(memory1)/Number(memory2);
+      num3.innerHTML = '';
+      num4.innerHTML = '';
+      num1.innerHTML = String(quotient);
+      memory1 = String(quotient);
+      memory2 = '';
+      console.log(memory1);
+      console.log(memory2);
+      break;
+    default:
+      startmemory1();
+  }
+ }
+
+ }

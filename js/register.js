@@ -5,10 +5,12 @@ window.onload = function() {
   var num4 = document.getElementById('display4');
   var num5 = document.getElementById('display5');
 
-  var button = document.querySelectorAll('button');
+  var ops = document.querySelectorAll('.ops');
+  var button = document.querySelectorAll('.number');
   var equals = document.getElementById('total');
-  var clear = document.getElementById('clear');
-  var newArray = [];
+  var clear = document.getElementById('.');
+  var memory1 = '';
+  var memory2 = '';
 
   for (i=0; i<button.length; i++) {
       button[i].onclick = function() {

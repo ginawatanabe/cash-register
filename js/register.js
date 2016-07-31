@@ -103,4 +103,12 @@ equals.onclick = function() {
   }
  }
 
- }
+clear.onclick = function() {
+  memory1 = '';
+  memory2 = '';
+  num3.innerHTML = '';
+  num1.innerHTML = memory1;
+  num4.innerHTML = memory2;
+  startmemory1();
+}
+}

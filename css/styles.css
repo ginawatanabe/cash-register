@@ -12,6 +12,22 @@
   display: inline;
 }
 
+#display2 {
+  display: none;
+}
+
+#display3 {
+  margin: 5px;
+}
+
+#display4 {
+  margin: 5px;
+}
+
+#display5 {
+  display: none;
+}
+
 button {
   background: hsla(44, 100%, 52%, 1);
   width: 50px;

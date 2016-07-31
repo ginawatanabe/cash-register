@@ -45,4 +45,13 @@ function startmemory2() {
    }
   }
  }
+
+for (i=0; i<ops.length; i++) {
+  ops[i].onclick = function() {
+    memory2 = '';
+    console.log(memory2);
+    num3.innerHTML = this.id;
+    startmemory2();
+  }
+ }
 }

@@ -12,44 +12,21 @@ window.onload = function() {
   var memory1 = '';
   var memory2 = '';
 
-  for (i=0; i<button.length; i++) {
-      button[i].onclick = function() {
-      newArray.push(this.id);
-      display.innerHTML = newArray.join('');
-      console.log(newArray);
-    }
-  }
-
- clear.onclick = function() {
-      newArray.length = 0;
-      newArray.push(0)
-      display.innerHTML = newArray;
-}
-
- equals.onclick = function() {
-      console.log(newArray);
-
-      var operator = ['+', '-', 'x', '/'];
-      newArray.forEach(function(element, index){
-        if (operator.indexOf(element) > -1){
-          console.log(newArray[index]);
-          var left = newArray.slice(0, index);
-          var right = newArray.slice(index+1);
-          var leftside = Number(left.join(''));
-          var rightside = Number(right.join(''));
-          console.log(leftside, rightside);
-
-          switch(newArray[index]) {
-            case '+': display.innerHTML = leftside + rightside;
-            break;
-            case '-': display.innerHTMl = leftside - rightside;
-            break;
-            case 'x': display.innerHTML = leftside * rightside;
-            break;
-            case '/': display.innerHTML = leftside / rightside;
-            break;
-            default: display.innerHTML = "Error";
-            }
-          }
-        })}
+  function startmemory1() {
+    for (i=0; i<button.length; i++) {
+        button[i].onclick = function() {
+        if (num1.innerHTML === '') {
+          memory1 = '';
+          memory1 = this.id;
+          num1.innerHTML = memory1;
+      } else if (num1.innerHTML !== '') {
+          num2.innerHTML = this.id;
+          memory1 = num1.innerHTML.concat(num2.innerHTML);
+          num1.innerHTML = memory1;
+          console.log(memory1);
       }
+     }
+    }
+   }
+
+}

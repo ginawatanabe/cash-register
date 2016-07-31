@@ -55,48 +55,34 @@ for (i=0; i<ops.length; i++) {
   }
  }
 
+function prep(total) {
+   num3.innerHTML = '';
+   num4.innerHTML = '';
+   num1.innerHTML = String(total);
+   memory1 = String(total);
+   memory2 = '';
+   console.log(memory1);
+   console.log(memory2);
+ }
+
 equals.onclick = function() {
 
   switch (num3.innerHTML) {
     case '+':
       var sum = Number(memory1)+Number(memory2);
-      num3.innerHTML = '';
-      num4.innerHTML = '';
-      num1.innerHTML = String(sum);
-      memory1 = String(sum);
-      memory2 = '';
-      console.log(memory1);
-      console.log(memory2);
+      prep(sum);
       break;
     case '-':
       var diff = Number(memory1)-Number(memory2);
-      num3.innerHTML = '';
-      num4.innerHTML = '';
-      num1.innerHTML = String(diff);
-      memory1 = String(diff);
-      memory2 = '';
-      console.log(memory1);
-      console.log(memory2);
+      prep(diff);
       break;
     case 'x':
       var product = Number(memory1)*Number(memory2);
-      num3.innerHTML = '';
-      num4.innerHTML = '';
-      num1.innerHTML = String(product);
-      memory1 = String(product);
-      memory2 = '';
-      console.log(memory1);
-      console.log(memory2);
+      prep(product);
       break;
     case '/':
       var quotient = Number(memory1)/Number(memory2);
-      num3.innerHTML = '';
-      num4.innerHTML = '';
-      num1.innerHTML = String(quotient);
-      memory1 = String(quotient);
-      memory2 = '';
-      console.log(memory1);
-      console.log(memory2);
+      prep(quotient);
       break;
     default:
       startmemory1();

@@ -28,6 +28,7 @@ function startmemory1() {
    }
   }
  }
+
 startmemory1();
 function startmemory2() {
   for (i=0; i<button.length; i++) {
